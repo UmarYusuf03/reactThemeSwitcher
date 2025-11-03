@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 
 export default function Card() {
     return (
@@ -74,4 +74,37 @@ export default function Card() {
             </div>
         </div>
     );
+}*/
+
+
+import React from 'react'
+import useTheme from '../contexts/theme'
+
+function Card() {
+  const { themeMode } = useTheme()
+
+  const isDark = themeMode === 'dark'
+
+  return (
+    <div className={`max-w-sm p-6 rounded-xl shadow-lg transition-all duration-300
+      ${isDark ? 'bg-gray-800 text-white border-gray-700' : 'bg-white text-gray-900 border-gray-200'}`}>
+      <img
+        src="data:image/png;base64,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"
+        alt="Product"
+        className="rounded-lg w-full mb-4"
+      />
+      <h2 className="text-2xl font-semibold mb-2">Smart Remote</h2>
+      <p className="mb-4 text-gray-400 dark:text-black-800">
+        Control your home devices easily.
+      </p>
+      <button
+        className={`px-5 py-2 rounded-lg font-medium transition-colors duration-200 hover:cursor-pointer
+          ${isDark ? 'bg-blue-600 hover:bg-blue-700 ' : 'bg-blue-500 hover:bg-blue-600 text-white'}`}
+      >
+        Buy Now
+      </button>
+    </div>
+  )
 }
+
+export default Card
