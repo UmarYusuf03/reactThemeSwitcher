@@ -94,7 +94,7 @@ function Card() {
         className="rounded-lg w-full mb-4"
       />
       <h2 className="text-2xl font-semibold mb-2">Smart Remote</h2>
-      <p className="mb-4 text-gray-400 dark:text-black-800">
+      <p className="mb-4 text-gray-400 dark:text-black-900">
         Control your home devices easily.
       </p>
       <button
