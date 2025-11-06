@@ -99,7 +99,7 @@ function Card() {
       </p>
       <button
         className={`px-5 py-2 rounded-lg font-medium transition-colors duration-200 hover:cursor-pointer
-          ${isDark ? 'bg-blue-600 hover:bg-blue-700 ' : 'bg-blue-500 hover:bg-blue-600 text-white'}`}
+          ${isDark ? 'bg-blue-600 hover:bg-blue-700 ' : 'bg-blue-500 hover:bg-blue-600 text-black'}`}
       >
         Buy Now
       </button>
